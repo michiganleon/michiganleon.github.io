@@ -448,6 +448,32 @@ a:hover { color: var(--accent-ink); text-decoration-color: var(--accent); }
   color: var(--ink-2);
 }
 
+.nb { white-space: nowrap; }
+
+.epigraph {
+  margin: 28px 0 8px;
+  padding: 0 0 0 18px;
+  border-left: 2px solid var(--accent);
+  max-width: 60ch;
+}
+.epigraph p {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.45;
+  color: var(--ink);
+}
+.epigraph cite {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+.epigraph cite::before { content: "— "; }
+
 .essays {
   margin: 8px 0 0;
   padding: 0;
