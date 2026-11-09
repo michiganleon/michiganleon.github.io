@@ -1,20 +1,20 @@
-title: Xuefeng Hu | Computer Vision, Ph.D.
-description: >
-  Xuefeng Hu, Computer Vision, Ph.D.
-copyright: Untitled
-sass:
-  sass_dir: assets/sass
-url: http://localhost:4000
-disqus_shortname: stratajekylldemo
-facebook_username: "xuefeng.leon.hu"
-twitter_username: 
+title: Xuefeng Hu
+tagline: Member of Technical Staff, AMI Labs
+description: >-
+  Xuefeng Hu is a Member of Technical Staff at AMI Labs in Paris, building world models
+  with real-world understanding. Previously Staff Research Scientist at ByteDance / TikTok; Ph.D. from USC.
+url: "https://xuefenghu.me"
+baseurl: ""
+
+author:
+  name: Xuefeng Hu
+  scholar: "https://scholar.google.com/citations?user=Ee616UkAAAAJ&hl=en"
+
+github_username: "michiganleon"
 linkedin_username: "xuefeng-hu-137b9485"
 instagram_username: "xuefenghu"
-pinterest_username: "huxuefeng1994"
-flickr_username:
-github_username:  "michiganleon"
-feed_icon:
-email: "xuefengh at usc.edu"
-gems: [jekyll-paginate]
-paginate_path: "/page/:num/"
-paginate: 5
+
+sass:
+  sass_dir: assets/sass
+permalink: /:categories/:year/:month/:day/:title.html
+exclude: [README.md, LICENSE.txt, Gemfile, Gemfile.lock, preview.jpg, googlecb48db6451ab8e39.html.bak]

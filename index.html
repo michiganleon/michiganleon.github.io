@@ -1,68 +1,337 @@
 ---
 layout: default
-image: /images/fulls/01.jpg
 ---
 
-<section id="one">
-    <header class="major">
-      <h2>About Me</h2>
-    </header>
-    <p>
-      <font size="4px">
-      I am currently a research scientist at ByteDance working on multi-modal foundation modal research. 
-      <br> 
-          My research interests include Computer Vision, Multi-Modality Learning, Source-Free Domain Adaptation and Representation Learning.
-      <br> 
-          I obtained my Ph.D. degree from <a href="https://www.usc.edu/" target="_blank"><span class="label">the University of South California</span></a>, under advisement of <a href="https://sites.usc.edu/iris-cvlab/" target="_blank"><span class="label">Prof. Ram Nevatia</span></a>.<br> 
-          I obtained my Master degree from 
-      <a href="https://www.columbia.edu/" target="_blank"><span class="label">the Columbia University in the city of New York</span></a>, and Bachelor degrees from both 
-      <a href="https://www.umich.edu/" target="_blank"><span class="label">the University of Michigan, Ann Arbor</span></a> and 
-      <a href="http://en.sjtu.edu.cn/" target="_blank"><span class="label">the Shanghai Jiao Tong University</span></a>. 
-      
-      For more information, please check my <a href="/resources/XuefengCV.pdf" target="_blank">Curriculum Vitae</a> (Updated January 2024), and <a href="https://scholar.google.com/citations?user=Ee616UkAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
-      <br><br> <b>News (Jan 23rd 2023):</b> I have completed my dissertation defense and graduated from USC!
-      <br><br> <b>News (Jan 4th 2023):</b> Our paper <a href="https://arxiv.org/abs/2308.03793" target="_blank">ReCLIP: Refine Contrastive Language Image Pre-Training with Source Free Domain Adaptation
-</a> is selected in the WACV 2024 best paper finallist! 
-      </font>
-    </p>
-    <!--<h2><a href="/sections/Projects.html">Projects</a></h2>-->
-    <!--<h2><a href="/sections/Publications.html">Publications</a></h2>-->
-    <h2><a href="/sections/MoreFacts.html">Miscellaneous</a></h2>
-  </section>
+<section class="hero" aria-labelledby="name">
+  <figure class="portrait">
+    <img src="{{ '/images/avatar.jpg' | relative_url }}" alt="Portrait of Xuefeng Hu" width="1075" height="1077">
+  </figure>
 
-<section>
-<header class="major">
-      <h1>Blog</h1>
-      <h4>As you set out for Ithaka, hope the voyage is a long one. <br>
-      <a href="http://www.cavafy.com/poems/content.asp?id=74">[<I>Ithaka</I>, C.P. Cavafy]</a></h4>
-</header>
-<br>
-  
-<br>
-<!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
-    <h2><a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a></h2>
-    <p>
-      <span><i class="fa fa-calendar"></i> {{ post.date | date: "%d %B %Y" }}{% if post.categories %} on <i class="fa fa-tags"></i> {{ post.categories | join: ', ' }}{% endif %}</span>
+  <div>
+    <h1 id="name">Xuefeng Hu</h1>
+    <p class="role">Member of Technical Staff<span class="sep">·</span><a href="https://amilabs.xyz" target="_blank" rel="noopener">AMI Labs</a><span class="sep">·</span>Paris</p>
+
+    <p class="lede">
+      I am building world models with real-world understanding.
     </p>
 
-    <div>
-      {{ post.excerpt }}
+    <div class="bio">
+      <p>
+        I work on world model research at <a href="https://amilabs.xyz" target="_blank" rel="noopener">AMI Labs</a>
+        (Advanced Machine Intelligence) in Paris.
+      </p>
+      <p>
+        Before that, I spent two and a half years at ByteDance / TikTok, most recently as a Staff Research Scientist
+        leading video foundation model pretraining. Earlier there I worked on unified understanding-and-generation models,
+        multimodal reinforcement learning, scalable memory and multimodal LLMs for math. I received my Ph.D. in Computer Science from the
+        <a href="https://www.usc.edu/" target="_blank" rel="noopener">University of Southern California</a>,
+        advised by <a href="https://sites.usc.edu/iris-cvlab/" target="_blank" rel="noopener">Prof. Ram Nevatia</a>,
+        where I studied how to adapt pre-trained vision–language models to new domains with little or no labeled data.
+      </p>
     </div>
-    <HR style="border:1 dashed #987cb9" width="100%" color=#987cb9 SIZE=1>
-{% endfor %}
+
+    <ul class="topics" aria-label="Research interests">
+      <li>World models</li>
+      <li>Video foundation models</li>
+      <li>Multimodal LLMs</li>
+      <li>Unified understanding &amp; generation</li>
+      <li>Multimodal RL</li>
+    </ul>
+
+    <ul class="links">
+      <li><a href="{{ site.author.scholar }}" target="_blank" rel="noopener">Google Scholar</a></li>
+      <li><a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </div>
 </section>
 
-
-{% if paginator.total_pages > 1 %}
-<!-- Pagination links -->
-<section>
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}">Previous</a>
-  {% endif %}
-  <span>Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}">Next</a>
-  {% endif %}
+<section class="section" id="news" aria-labelledby="news-h">
+  <h2 class="section-label" id="news-h">News</h2>
+  <div class="section-body">
+    <ul class="timeline news">
+      <li><span class="when">Sep 2026</span><p class="what"><a href="https://arxiv.org/abs/2602.14041" target="_blank" rel="noopener">BitDance</a> accepted to <strong>NeurIPS 2026</strong>.</p></li>
+      <li><span class="when">Aug 2026</span><p class="what"><a href="https://arxiv.org/abs/2610.33882" target="_blank" rel="noopener">Intervention-Certified Amplification</a> accepted to <strong>EMNLP 2026</strong> Findings.</p></li>
+      <li><span class="when">Jul 2026</span><p class="what"><strong>Joined AMI Labs in Paris</strong> as a Member of Technical Staff, building world models.</p></li>
+      <li><span class="when">Jun 2026</span><p class="what">Released the <a href="https://arxiv.org/abs/2606.11188" target="_blank" rel="noopener">ARM technical report</a>, an autoregressive multimodal model with unified discrete representations.</p></li>
+      <li><span class="when">Mar 2026</span><p class="what">Promoted to <strong>Staff Research Scientist</strong> at TikTok, leading video foundation model pretraining.</p></li>
+      <li><span class="when">Feb 2026</span><p class="what"><a href="https://arxiv.org/abs/2601.14256" target="_blank" rel="noopener">Implicit Neural Representation Facilitates Unified Universal Vision Encoding</a> accepted to <strong>CVPR 2026</strong>.</p></li>
+      <li><span class="when">Sep 2025</span><p class="what"><a href="https://arxiv.org/abs/2505.11196" target="_blank" rel="noopener">DiCo</a> accepted to <strong>NeurIPS 2025</strong> as a Spotlight.</p></li>
+      <li><span class="when">Aug 2025</span><p class="what"><a href="https://arxiv.org/abs/2409.12568" target="_blank" rel="noopener">InfiMM-WebMath-40B</a> accepted to <strong>EMNLP 2025</strong> Findings; the dataset has 16K+ downloads on Hugging Face.</p></li>
+      <li><span class="when">Feb 2024</span><p class="what">Joined ByteDance Seed-Foundation as a research scientist.</p></li>
+      <li><span class="when">Jan 2024</span><p class="what"><a href="https://arxiv.org/abs/2308.03793" target="_blank" rel="noopener">ReCLIP</a> presented as an oral at <strong>WACV 2024</strong> and selected as a Best Paper Finalist.</p></li>
+      <li><span class="when">Dec 2023</span><p class="what">Completed my Ph.D. at USC.</p></li>
+    </ul>
+  </div>
 </section>
-{% endif %}
+
+<section class="section" id="publications" aria-labelledby="pubs-h">
+  <h2 class="section-label" id="pubs-h">Publications</h2>
+  <div class="section-body">
+    <h3 class="subhead">Preprints</h3>
+    <ul class="pubs">
+      <li class="pub">
+        <div class="venue is-pending">Tech report 2026</div>
+        <div>
+          <p class="pub-title"><a href="https://arxiv.org/abs/2606.11188" target="_blank" rel="noopener">ARM: An AutoRegressive Large Multimodal Model with Unified Discrete Representations</a></p>
+          <p class="pub-authors">J. Wang*, X. Wang*, J. Pan*, <span class="me">X. Hu*</span>, F. Li, J. Sun, C. Deng, Z. Chen, Y. Chen, K. Tian, M. Gwilliam, H. Chen, D. Guan, K. Xu, W. Huang, Z. Wu, H. Fan, Y.-G. Jiang, Z. Yang</p>
+          <div class="pub-meta">
+            <span class="tag is-quiet">Co-first author</span>
+            <a href="https://arxiv.org/abs/2606.11188" target="_blank" rel="noopener">arXiv</a>
+            <a href="https://github.com/wdrink/ARM" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <h3 class="subhead">Selected papers</h3>
+    <ul class="pubs">
+      <li class="pub">
+        <div class="venue">NeurIPS 2026</div>
+        <div>
+          <p class="pub-title"><a href="https://arxiv.org/abs/2602.14041" target="_blank" rel="noopener">BitDance: Scaling Autoregressive Generative Models with Binary Tokens</a></p>
+          <p class="pub-authors">Y. Ai, J. Han, S. Zhuang, W. Mao, <span class="me">X. Hu</span>, Z. Yang, Z. Yang, H. Huang, X. Yue, H. Chen</p>
+          <div class="pub-meta">
+            <a href="https://arxiv.org/abs/2602.14041" target="_blank" rel="noopener">arXiv</a>
+            <a href="https://github.com/shallowdream204/BitDance" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </li>
+      <li class="pub">
+        <div class="venue">EMNLP 2026</div>
+        <div>
+          <p class="pub-title"><a href="https://arxiv.org/abs/2610.33882" target="_blank" rel="noopener">Intervention-Certified Amplification: A Validity Gate for σ-Weighted Post-Training</a></p>
+          <p class="pub-authors">L. Chen, M. Wei, <span class="me">X. Hu</span>, W. Liu</p>
+          <div class="pub-meta">
+            <span class="tag is-quiet">Findings</span>
+            <a href="https://arxiv.org/abs/2610.33882" target="_blank" rel="noopener">arXiv</a>
+            <a href="https://aclanthology.org/2026.findings-emnlp.2090/" target="_blank" rel="noopener">ACL Anthology</a>
+          </div>
+        </div>
+      </li>
+      <li class="pub">
+        <div class="venue">CVPR 2026</div>
+        <div>
+          <p class="pub-title"><a href="https://arxiv.org/abs/2601.14256" target="_blank" rel="noopener">Implicit Neural Representation Facilitates Unified Universal Vision Encoding</a></p>
+          <p class="pub-authors">M. Gwilliam, X. Wang, <span class="me">X. Hu</span>, Z. Yang</p>
+          <div class="pub-meta">
+            <a href="https://arxiv.org/abs/2601.14256" target="_blank" rel="noopener">arXiv</a>
+            <a href="https://github.com/tiktok/huvr" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </li>
+      <li class="pub">
+        <div class="venue">NeurIPS 2025</div>
+        <div>
+          <p class="pub-title"><a href="https://arxiv.org/abs/2505.11196" target="_blank" rel="noopener">DiCo: Revitalizing ConvNets for Scalable and Efficient Diffusion Modeling</a></p>
+          <p class="pub-authors">Y. Ai, Q. Fan, <span class="me">X. Hu</span>, Z. Yang, R. He, H. Huang</p>
+          <div class="pub-meta">
+            <span class="tag">Spotlight</span>
+            <a href="https://arxiv.org/abs/2505.11196" target="_blank" rel="noopener">arXiv</a>
+            <a href="https://github.com/shallowdream204/DiCo" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </li>
+      <li class="pub">
+        <div class="venue">EMNLP 2025</div>
+        <div>
+          <p class="pub-title"><a href="https://arxiv.org/abs/2409.12568" target="_blank" rel="noopener">InfiMM-WebMath-40B: Advancing Multimodal Pre-Training for Enhanced Mathematical Reasoning</a></p>
+          <p class="pub-authors">X. Han*, Y. Jian*, <span class="me">X. Hu*</span>, H. Liu*, Y. Wang*, Q. Fan, Y. Ai, H. Huang, R. He, Z. Yang, Q. You</p>
+          <div class="pub-meta">
+            <span class="tag is-quiet">Findings</span>
+            <span class="tag is-quiet">Co-first author</span>
+            <a href="https://arxiv.org/abs/2409.12568" target="_blank" rel="noopener">arXiv</a>
+            <a href="https://huggingface.co/datasets/Infi-MM/InfiMM-WebMath-40B" target="_blank" rel="noopener">Dataset</a>
+          </div>
+        </div>
+      </li>
+      <li class="pub">
+        <div class="venue">CVPR 2024</div>
+        <div>
+          <p class="pub-title"><a href="https://arxiv.org/abs/2312.04076" target="_blank" rel="noopener">Large Language Models are Good Prompt Learners for Low-Shot Image Classification</a></p>
+          <p class="pub-authors">Z. Zheng, J. Wei, <span class="me">X. Hu</span>, H. Zhu, R. Nevatia</p>
+          <div class="pub-meta">
+            <a href="https://arxiv.org/abs/2312.04076" target="_blank" rel="noopener">arXiv</a>
+            <a href="https://github.com/zhaohengz/LLaMP" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </li>
+      <li class="pub">
+        <div class="venue">WACV 2024</div>
+        <div>
+          <p class="pub-title"><a href="https://arxiv.org/abs/2308.03793" target="_blank" rel="noopener">ReCLIP: Refine Contrastive Language Image Pre-Training with Source Free Domain Adaptation</a></p>
+          <p class="pub-authors"><span class="me">X. Hu</span>, K. Zhang, L. Xia, A. Chen, J. Luo, K. Wang, N. Qiao, X. Zeng, Y. Sun, M. Sun, C. Kuo, R. Nevatia</p>
+          <div class="pub-meta">
+            <span class="tag">Oral · Best Paper Finalist</span>
+            <a href="https://arxiv.org/abs/2308.03793" target="_blank" rel="noopener">arXiv</a>
+            <a href="https://github.com/michiganleon/ReCLIP_WACV" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </li>
+      <li class="pub">
+        <div class="venue">CVPR 2021</div>
+        <div>
+          <p class="pub-title"><a href="https://arxiv.org/abs/2103.16725" target="_blank" rel="noopener">SimPLE: Similar Pseudo Label Exploitation for Semi-Supervised Classification</a></p>
+          <p class="pub-authors">Z. Hu, Z. Yang, <span class="me">X. Hu</span>, R. Nevatia</p>
+          <div class="pub-meta">
+            <a href="https://arxiv.org/abs/2103.16725" target="_blank" rel="noopener">arXiv</a>
+            <a href="https://github.com/zijian-hu/SimPLE" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </li>
+      <li class="pub">
+        <div class="venue">ECCV 2020</div>
+        <div>
+          <p class="pub-title"><a href="https://arxiv.org/abs/2009.00726" target="_blank" rel="noopener">SPAN: Spatial Pyramid Attention Network for Image Manipulation Localization</a></p>
+          <p class="pub-authors"><span class="me">X. Hu</span>, Z. Zhang, Z. Jiang, S. Chaudhuri, Z. Yang, R. Nevatia</p>
+          <div class="pub-meta">
+            <a href="https://arxiv.org/abs/2009.00726" target="_blank" rel="noopener">arXiv</a>
+            <a href="https://github.com/ZhiHanZ/IRIS0-SPAN" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <p class="note">* Equal contribution. Full list on <a href="{{ site.author.scholar }}" target="_blank" rel="noopener">Google Scholar</a>.</p>
+  </div>
+</section>
+
+<section class="section" id="experience" aria-labelledby="exp-h">
+  <h2 class="section-label" id="exp-h">Experience</h2>
+  <div class="section-body">
+    <ul class="timeline roles">
+      <li>
+        <span class="when">2026 – now</span>
+        <div class="what">
+          <span class="org">AMI Labs</span> <span class="org-role">· Member of Technical Staff</span>
+          <span class="org-meta">Advanced Machine Intelligence · Paris, France</span>
+          <p class="org-desc">World model research.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2024 – 2026</span>
+        <div class="what">
+          <span class="org">ByteDance / TikTok</span>
+          <span class="org-meta">San Jose, CA · Bellevue, WA</span>
+          <ul class="steps">
+            <li><span class="step-role">Staff Research Scientist</span><span class="step-when">Mar 2026 – Jul 2026</span><p class="org-desc">Led video foundation model pretraining.</p></li>
+            <li><span class="step-role">Senior Research Scientist</span><span class="step-when">Jul 2025 – Mar 2026</span><p class="org-desc">Unified understanding and generation models; multimodal RL; scalable memory.</p></li>
+            <li><span class="step-role">Research Scientist</span><span class="step-when">Nov 2024 – Jun 2025</span><p class="org-desc">Agentic RL for multimodal LLMs.</p></li>
+            <li><span class="step-role">Research Scientist, Seed-Foundation</span><span class="step-when">Feb 2024 – Oct 2024</span><p class="org-desc">Multimodal LLMs for math: data, continued pretraining, SFT and RL.</p></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <span class="when">2022</span>
+        <div class="what">
+          <span class="org">Amazon Lab126</span> <span class="org-role">· Research Intern</span>
+          <span class="org-meta">Bellevue, WA</span>
+          <p class="org-desc">Developed ReCLIP, improving CLIP’s average zero-shot accuracy by 5.11% across 22 benchmarks without extra supervision.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2021</span>
+        <div class="what">
+          <span class="org">Meta</span> <span class="org-role">· Research Intern</span>
+          <span class="org-meta">Boston, MA</span>
+          <p class="org-desc">Online test-time adaptation of pre-trained models under distribution shift.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2020</span>
+        <div class="what">
+          <span class="org">Facebook</span> <span class="org-role">· Research Intern</span>
+          <span class="org-meta">Boston, MA</span>
+          <p class="org-desc">Part-level contrastive learning for weakly-supervised fine-grained anomaly detection.</p>
+        </div>
+      </li>
+    </ul>
+
+    <h3 class="subhead">Education</h3>
+    <ul class="timeline roles">
+      <li>
+        <span class="when">2018 – 2023</span>
+        <div class="what">
+          <span class="org">University of Southern California</span> <span class="org-role">· Ph.D., Computer Science</span>
+          <span class="org-meta">Advisor: Ram Nevatia · Dissertation: <em>Adapt Pre-trained Representation Towards Downstream Tasks</em></span>
+        </div>
+      </li>
+      <li>
+        <span class="when">2017 – 2018</span>
+        <div class="what">
+          <span class="org">Columbia University</span> <span class="org-role">· M.S., Computer Science</span>
+          <span class="org-meta">Advisor: Shih-Fu Chang</span>
+        </div>
+      </li>
+      <li>
+        <span class="when">2015 – 2017</span>
+        <div class="what">
+          <span class="org">University of Michigan, Ann Arbor</span> <span class="org-role">· B.S.E., Computer Science</span>
+          <span class="org-meta">Advisor: Jia Deng</span>
+        </div>
+      </li>
+      <li>
+        <span class="when">2013 – 2017</span>
+        <div class="what">
+          <span class="org">Shanghai Jiao Tong University</span> <span class="org-role">· B.S.E., Electrical &amp; Computer Engineering</span>
+        </div>
+      </li>
+    </ul>
+
+    <h3 class="subhead">Selected honors</h3>
+    <ul class="timeline">
+      <li><span class="when">2024</span><p class="what">Best Paper Award Finalist, WACV 2024</p></li>
+      <li><span class="when">2022</span><p class="what">“30 under 30”, All America Chinese Youth Federation</p></li>
+      <li><span class="when">2017</span><p class="what">James B. Angell Scholar, University of Michigan</p></li>
+      <li><span class="when">2012</span><p class="what">National First Prize, China High School Mathematics Competition</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="photography" aria-labelledby="photo-h">
+  <h2 class="section-label" id="photo-h">Photography</h2>
+  <div class="section-body">
+    <p class="prose-lite-intro">Street photography from the cities I have lived in and passed through.</p>
+    <ul class="photos">
+      <li><a href="https://www.instagram.com/p/BtDBMGqlY3s/" target="_blank" rel="noopener"><img src="{{ '/images/photos/01.jpg' | relative_url }}" alt="Vintage car in black and white, 2019" width="1080" height="1350" loading="lazy" decoding="async"></a></li>
+      <li><a href="https://www.instagram.com/p/B-L3V9HHn7u/" target="_blank" rel="noopener"><img src="{{ '/images/photos/02.jpg' | relative_url }}" alt="Beach at sunset, 2020" width="1080" height="1350" loading="lazy" decoding="async"></a></li>
+      <li><a href="https://www.instagram.com/p/BzFBTf1glH9/" target="_blank" rel="noopener"><img src="{{ '/images/photos/03.jpg' | relative_url }}" alt="Cyclists at golden hour, 2019" width="1080" height="1350" loading="lazy" decoding="async"></a></li>
+      <li><a href="https://www.instagram.com/p/DUKd9JzDoW6/" target="_blank" rel="noopener"><img src="{{ '/images/photos/04.jpg' | relative_url }}" alt="Orange umbrella in the rain, 2026" width="1080" height="1350" loading="lazy" decoding="async"></a></li>
+      <li><a href="https://www.instagram.com/p/DUKdzFiDmhQ/" target="_blank" rel="noopener"><img src="{{ '/images/photos/05.jpg' | relative_url }}" alt="Storefront at night, 2026" width="1080" height="1350" loading="lazy" decoding="async"></a></li>
+      <li><a href="https://www.instagram.com/p/Cvi0-ELxEEn/" target="_blank" rel="noopener"><img src="{{ '/images/photos/06.jpg' | relative_url }}" alt="Woman walking down a narrow alley, 2023" width="1080" height="1350" loading="lazy" decoding="async"></a></li>
+      <li><a href="https://www.instagram.com/p/CveW7Bgu5vL/" target="_blank" rel="noopener"><img src="{{ '/images/photos/07.jpg' | relative_url }}" alt="Taxis at night, 2023" width="1080" height="1350" loading="lazy" decoding="async"></a></li>
+      <li><a href="https://www.instagram.com/p/CuA8IUYpLeB/" target="_blank" rel="noopener"><img src="{{ '/images/photos/08.jpg' | relative_url }}" alt="Crosswalk with a passing bus, 2023" width="1080" height="1350" loading="lazy" decoding="async"></a></li>
+      <li><a href="https://www.instagram.com/p/Ct7wXqUP3zs/" target="_blank" rel="noopener"><img src="{{ '/images/photos/09.jpg' | relative_url }}" alt="Neon-lit market, 2023" width="1080" height="1350" loading="lazy" decoding="async"></a></li>
+    </ul>
+    <p class="note">More on Instagram, <a href="https://www.instagram.com/{{ site.instagram_username }}/" target="_blank" rel="noopener">@{{ site.instagram_username }}</a>.</p>
+  </div>
+</section>
+
+<section class="section" id="beyond" aria-labelledby="beyond-h">
+  <h2 class="section-label" id="beyond-h">Beyond research</h2>
+  <div class="section-body">
+    <div class="prose-lite">
+      <p>
+        In 2019 I founded <strong>LA Stories</strong> (洛杉矶文化沙龙), a non-profit public forum in Los Angeles that hosts
+        talks, panel discussions and film screenings for the local Mandarin-speaking community, with more than 2,000
+        registered audience members. I also run <a href="https://www.instagram.com/midnight.choir/" target="_blank" rel="noopener">Midnight Choir</a>.
+      </p>
+      <p>
+        I love film, cats and being on the road: Dalian → Shanghai → Ann Arbor → New York → Los Angeles → Seattle →
+        San Jose → Paris. A few <a href="{{ '/sections/MoreFacts.html' | relative_url }}">more facts about me</a>.
+      </p>
+    </div>
+
+    <h3 class="subhead">Essays</h3>
+    <ul class="essays">
+      {% for post in site.posts %}
+      <li>
+        <span class="when">{{ post.date | date: "%Y" }}</span>
+        <div>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% if post.categories.size > 0 %}<span class="cat">{{ post.categories | join: ', ' }}</span>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

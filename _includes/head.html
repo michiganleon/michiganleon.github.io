@@ -1,10 +1,28 @@
-<title>{% if page.title %}{{ page.title | append:' - ' | append:site.title }}{% else %}{{ site.title }}{% endif %}</title>
-<meta charset="utf-8" />
-<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description | markdownify | strip_html }}{% endif %}" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!--[if lte IE 8]><script src="{{ site.github.url }}/assets/js/ie/html5shiv.js"></script><![endif]-->
-<link rel="stylesheet" href="{{ site.github.url }}/assets/css/main.css" />
-<!--[if lte IE 8]><link rel="stylesheet" href="{{ site.github.url }}/assets/css/ie8.css" /><![endif]-->
-<link rel="alternate" type="application/atom+xml" href="{{ site.github.url }}/atom.xml" title="Sitewide ATOM Feed" />
-<link rel="alternate" type="application/rss+xml" href="{{ site.github.url }}/rss.xml" title="Sitewide RSS Feed" />
-<link rel="author" type="text/plain" href="{{ site.github.url }}/humans.txt" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} · {{ site.tagline }}{% endif %}</title>
+{% capture page_desc %}{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 180 }}{% else %}{{ site.description | strip }}{% endif %}{% endcapture %}
+<meta name="description" content="{{ page_desc | escape }}">
+<meta name="author" content="{{ site.author.name }}">
+<link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/images/avatar.jpg' | relative_url }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+
+<link rel="alternate" type="application/atom+xml" href="{{ '/atom.xml' | relative_url }}" title="{{ site.title }}">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}profile{% endif %}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }} · {{ site.tagline }}{% endif %}">
+<meta property="og:description" content="{{ page_desc | escape }}">
+<meta property="og:url" content="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+<meta property="og:image" content="{{ '/images/avatar.jpg' | absolute_url }}">
+<meta name="twitter:card" content="summary">

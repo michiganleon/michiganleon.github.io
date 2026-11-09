@@ -1,16 +1,20 @@
-<!-- Header -->
-  <header id="header">
-    <a href="{{ site.github.url }}/" class="image avatar"><img src="{{ site.github.url }}/images/avatar.jpg" alt="" /></a>
-    <h1>
-    	<b>Xuefeng Hu</b>
-    </h1>
-    <h1>
-        Computer Vision Researcher
-    </h1>
-    <h1>
-        Founder of 洛杉矶文化沙龙 LA Stories
-    </h1>
-    <h1>
-        Owner of  <a href="https://www.instagram.com/midnight.choir/" target="_blank">Midnight Choir</a>
-    </h1>
-  </header>
+<header class="topbar" id="top">
+  <div class="wrap">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.author.name }}</a>
+    <ul class="nav">
+      <li><a href="{{ '/#news' | relative_url }}">News</a></li>
+      <li><a href="{{ '/#publications' | relative_url }}">Publications</a></li>
+      <li><a href="{{ '/#experience' | relative_url }}">Experience</a></li>
+      <li><a href="{{ '/#photography' | relative_url }}">Photography</a></li>
+      <li><a href="{{ '/#beyond' | relative_url }}">Beyond research</a></li>
+    </ul>
+  </div>
+</header>
+<script>
+  (function () {
+    var bar = document.getElementById('top');
+    var onScroll = function () { bar.classList.toggle('is-scrolled', window.scrollY > 8); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>

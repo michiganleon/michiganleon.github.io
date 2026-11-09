@@ -26,7 +26,7 @@ sitemap:
 			</div>
 		</content>
 		<author>
-			<name>{{ site.copyright }}</name>
+			<name>{{ site.author.name }}</name>
 		</author>
 	</entry>
   {% endfor %}
